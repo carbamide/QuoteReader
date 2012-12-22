@@ -3,11 +3,47 @@ package com.example.quotereader;
 
 import java.util.ArrayList;
 
+import android.graphics.Bitmap;
+
 public class DataSource {
     private ArrayList<Integer> mPhotoPool;
     private ArrayList<Integer> mQuotePool;
     private ArrayList<Integer> mPhotoHdPool;
 
+    private Bitmap mThumbnail;
+    private Bitmap mHdImage;
+    private String mQuote;
+    private float mRating;
+    
+    public Bitmap getmThumbnaiol() {
+    	return mThumbnail;
+    }
+    
+    public Bitmap getmHdImage() {
+    	return mHdImage;
+    }
+    
+    public String getmQuote() {
+    	return mQuote;
+    }
+    
+    public float getmRating() {
+    	return mRating;
+    }
+    
+    public void setmRating(float mRating) {
+    	this.mRating = mRating;
+    }
+    
+    public void setmHdImage(Bitmap mHdImage) {
+    	this.mHdImage = mHdImage;
+    }
+    
+    public void setmQuote(String mQuote) {
+    	this.mQuote = mQuote;
+    }
+    
+    
     public ArrayList<Integer> getmPhotoHdPool() {
         return mPhotoHdPool;
     }
@@ -64,9 +100,9 @@ public class DataSource {
     }
     
     public DataSource() {
-    	mPhotoPool = new ArrayList();
-    	mQuotePool = new ArrayList();
-    	mPhotoHdPool = new ArrayList();
+    	mPhotoPool = new ArrayList<Integer>();
+    	mQuotePool = new ArrayList<Integer>();
+    	mPhotoHdPool = new ArrayList<Integer>();
     	
     	setupPhotoPool();
     	setupQuotePool();

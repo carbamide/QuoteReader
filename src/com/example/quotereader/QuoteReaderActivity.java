@@ -75,7 +75,7 @@ public class QuoteReaderActivity extends Activity {
 		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 			@Override
-			public void onItemClick(AdapterView arg0, View arg1, int position, long arg3) {
+			public void onItemClick(AdapterView arg0, View arg1, int position, long arg3) {				
 				Intent i = new Intent(QuoteReaderActivity.this, QuoteDetail.class);
 				i.putExtra("position", position);
 				startActivity(i);

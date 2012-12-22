@@ -28,6 +28,8 @@ public class QuoteDetail extends Activity {
 		
 		mQuote = (TextView)findViewById(R.detail.quote);
 		
+		System.out.println("the current line is" + mPosition);
+		
 		mImageView.setImageResource(mDataSource.getmPhotoHdPool().get(mPosition));
 		mQuote.setText(getResources().getString(mDataSource.getmQuotePool().get(mPosition)));
 	}
