@@ -14,5 +14,6 @@
 	<string name="quote_8">Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.</string>
 	<string name="quote_9">I\'m the only person I know that\'s lost a quarter of a billion dollars in one year. &#8230; It\'s very character-building.</string>
 	<string name="quote_10">It\'s more fun to be a pirate than join the Navy.</string>
-				
+	<string name="context_menu_title">Menu</string>
+	
 </resources>

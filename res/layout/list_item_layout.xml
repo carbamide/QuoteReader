@@ -14,10 +14,11 @@
         android:layout_toRightOf="@+list/thumb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18dip"
+        android:lines="4"
+        android:textSize="14sp"
         android:layout_marginLeft="10dip"
         android:layout_centerVertical="true"
-        android:singleLine="true"
+        android:singleLine="false"
         android:ellipsize="end"
         android:textStyle="bold" 
         />
