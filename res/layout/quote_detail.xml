@@ -4,20 +4,22 @@
     android:layout_height="fill_parent" >
     <RelativeLayout 
         android:layout_width="fill_parent" 
-        android:layout_height="fill_parent">        
+        android:layout_height="wrap_content">        
         <ImageView
             android:id="@+detail/image"
             android:layout_alignParentTop="true"
             android:layout_width="fill_parent"
             android:layout_height="350dip"
             android:layout_marginLeft="5dip"
-            android:src="@drawable/steve_1" />        
+            android:src="@drawable/steve_1" />   
+        
         <EditText 
+            android:inputType="text"
             android:id="@+detail/quote"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_below="@detail/image"
-            android:textSize="24dip"
+            android:textSize="24sp"
             />        
     </RelativeLayout> 
 </ScrollView>
