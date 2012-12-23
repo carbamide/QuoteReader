@@ -12,7 +12,7 @@
             android:layout_height="350dip"
             android:layout_marginLeft="5dip"
             android:src="@drawable/steve_1" />        
-        <TextView 
+        <EditText 
             android:id="@+detail/quote"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

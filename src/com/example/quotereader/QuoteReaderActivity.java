@@ -26,7 +26,7 @@ public class QuoteReaderActivity extends Activity {
 		public QuoteAdapter(Context c) {
 			mContext = c;
 			mInflator = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-			mDataSource = new DataSource();
+			mDataSource = DataSource.getDataSourceInstance(mContext);
 		}
 
 		@Override
@@ -54,16 +54,26 @@ public class QuoteReaderActivity extends Activity {
 			}
 
 			thumbnail = (ImageView)convertView.findViewById(R.list.thumb);
-			thumbnail.setImageResource(mDataSource.getmPhotoPool().get(position));
+			thumbnail.setImageBitmap(mDataSource.getmItemsData().get(position).getmThumbnail());
 
 			quote = (TextView)convertView.findViewById(R.list.text);
-			quote.setText(mDataSource.getmQuotePool().get(position));
+			quote.setText(mDataSource.getmItemsData().get(position).getmQuote());
 
 
 			return convertView;
 		}
 	}
 
+	@Override
+	protected void onResume() {
+		super.onResume();
+		
+		if (mListView != null) {
+			QuoteAdapter adapter = (QuoteAdapter) mListView.getAdapter();
+			adapter.notifyDataSetChanged();
+		}
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
